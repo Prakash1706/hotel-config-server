@@ -1,0 +1,25 @@
+management:
+  endpoint:
+    health:
+      show-details: always
+    shutdown:
+      enabled: true
+      
+  endpoints:
+    web:
+      exposure:
+        include:
+        - "*"
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+spring:
+   boot:
+    admin:
+      client:
+        url:
+        - http://localhost:5050
